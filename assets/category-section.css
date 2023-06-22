@@ -1,0 +1,76 @@
+.collections {
+  margin-bottom: 120px; }
+  .collections__main-grid {
+    margin: 0 -15px;
+    flex-wrap: wrap; }
+  .collections__row-wrap {
+    position: relative;
+    max-width: 50%;
+    flex: 50%;
+    padding: 0 15px;
+    margin-bottom: 30px; }
+    .collections__row-wrap:last-child {
+      max-width: 100%;
+      flex: 100%;
+      margin-bottom: 0; }
+  .collections__title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    max-width: 480px;
+    top: 30px;
+    left: 30px; }
+  .collections__btn {
+    font-size: 16px;
+    padding: 15px 24px;
+    background: #FFFFFF;
+    color: #242424;
+    font-weight: 700;
+    display: block;
+    max-width: fit-content;
+    bottom: 30px;
+    left: 30px; }
+    .collections__btn:hover {
+      background-color: #557DCB;
+      color: #FFFFFF;
+      border: 1px solid #242424; }
+
+@media screen and (max-width: 1279px) {
+  .collections__title {
+    font-size: 38px; } }
+
+@media screen and (max-width: 990px) {
+  .collections {
+    margin-bottom: 70px; }
+    .collections__main-grid {
+      margin: 0 -10px; }
+    .collections__row-wrap {
+      padding: 0 10px; }
+    .collections__title {
+      font-size: 28px;
+      max-width: 300px; }
+    .collections__btn {
+      font-size: 14px;
+      padding: 12px 20px; } }
+
+@media screen and (max-width: 767px) {
+  .collections {
+    margin-bottom: 40px; }
+    .collections__main-grid {
+      margin: 0; }
+    .collections__row-wrap {
+      max-width: 100%;
+      flex: 100%;
+      padding: 0;
+      margin-bottom: 20px; }
+    .collections__title {
+      font-size: 24px;
+      top: 20px;
+      left: 20px; }
+    .collections__btn {
+      font-size: 14px;
+      padding: 12px 18px;
+      bottom: 20px;
+      left: 20px; } }

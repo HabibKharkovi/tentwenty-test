@@ -1,0 +1,30 @@
+.featured-collection-slider {
+  margin-bottom: 120px; }
+  .featured-collection-slider .wrap {
+    position: relative; }
+  .featured-collection-slider .badge {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    padding: 12px 16px;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    color: #242424; }
+  .featured-collection-slider .heart-icon {
+    width: 20px;
+    height: 18px; }
+  .featured-collection-slider .contents-wrapper .page-width {
+    padding-right: 0; }
+  .featured-collection-slider .featured-slider {
+    overflow: hidden; }
+
+@media (max-width: 990px) {
+  .featured-collection-slider {
+    margin-bottom: 90px; } }
+
+@media (max-width: 767px) {
+  .featured-collection-slider {
+    margin-bottom: 70px;
+    position: relative; }
+    .featured-collection-slider .contents-wrapper {
+      padding-bottom: 50px; } }

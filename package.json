@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js", 
   "scripts": {
-    "dev": "node-sass --watch scss -o assets & shopify theme dev "
+    "dev": "node-sass --watch scss -o assets & shopify theme dev ",
+    "buildsass" : "node-sass --watch scss -o assets"
   },
   "author": "HabibKharkovi",
   "license": "ISC",

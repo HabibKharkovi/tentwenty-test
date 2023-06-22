@@ -1,0 +1,54 @@
+@import "variable.scss";
+
+.category-section {
+  margin-bottom: 120px;
+  .section-title {
+    line-height: 1;
+    color: $Mine-Shaft;
+  }
+  img {
+    object-fit: contain;
+  }
+  .image-wrap {
+    margin-bottom: 30px;
+  }
+  .pre-title {
+    font-size: 24px;
+    text-transform: capitalize;
+    text-align: center;
+    color: $Mine-Shaft;
+    display: block;
+    line-height: 1.2;
+  }
+  .slider {
+    overflow: hidden;
+    position: relative;
+  }
+  .category-contents {
+    .page-width {
+      padding-right: 0;
+    }
+  
+  }
+ 
+}
+@media(max-width: 1199px ){
+  .category-section {
+    margin-bottom: 90px;
+    .image-wrap {
+      margin-bottom: 16px;
+    }
+    .pre-title {
+      font-size: 20px;
+    }
+  }
+}
+@media(max-width: 767px ){
+  .category-section {
+    margin-bottom: 50px;
+    position: relative;
+    .slider {
+      padding-bottom: 50px;
+    }
+  }
+}

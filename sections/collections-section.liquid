@@ -1,0 +1,113 @@
+{{ 'collections-section.css' | asset_url | stylesheet_tag }}
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+{{ 'swiper-btn.css' | asset_url | stylesheet_tag }}
+
+<div class="category-section section-swiper-btns">
+  <div class="page-width">
+      <div class="section-header flex-between">
+        {% if section.settings.title != blank %}
+          <h2 class="heading-L section-title uppercase">{{ section.settings.title }}</h2>
+        {% endif %}
+        <div class="swiper-buttons flex ">
+        <div class="swiper-button-prev swiper-button flex flex-center align-center" id="prevArrow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+            <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next swiper-button flex flex-center align-center" id="nextArrow" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+            <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
+          </svg>
+        </div>
+        </div>
+      </div>
+  </div>
+  <div class="category-contents">
+    <div class="slider" id="categorySlider">
+      <div class="wrapper swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'choose-collection' %}
+            {% assign collection = collections[block.settings.choose_collection] %}
+            <div class="item-wrap swiper-slide">
+              <a class="item " href="{{ collection.url }}">
+                {% if collection.featured_image != blank %}
+                  <div class="image-wrap border-radius_l  ">
+                    <img class="img" src="{{ collection.featured_image | img_url: 'master'}}"/>
+                  </div>
+                {% endif %}
+                {% if collection.title != blank %}
+                  <span class="pre-title text-align capitalize">{{ collection.title }}</span>
+                {% endif %}
+              </a>
+            </div>
+          {% endif %}
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var categorySlider = new Swiper("#categorySlider", {
+    slidesPerView: 5.4,
+    loop: false,
+    breakpoints: {
+        360: {
+          slidesPerView: 1.17,
+          spaceBetween: 10,
+        },
+        480: {
+            spaceBetween: 15,
+            slidesPerView: 2.18
+        },
+        768: {
+            slidesPerView: 3.3,
+            spaceBetween: 15,
+        },
+        990: {
+            slidesPerView: 4.4,
+            spaceBetween: 20,
+        },
+        1200: {
+          spaceBetween: 20,
+        },
+        1280: {
+            spaceBetween: 30,
+        },
+      },
+    navigation: {
+        nextEl: "#nextArrow",
+        prevEl: "#prevArrow",
+      }
+  })
+</script>
+{% schema %}
+  {
+    "name": "Category Section",
+    "settings":[
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "choose-collection",
+        "name": "Choose Collection",
+        "settings":[
+          {
+            "type": "collection",
+            "id": "choose_collection",
+            "label": "Choose Collection"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Category Section"
+      }
+    ]
+  }
+{% endschema %}
+

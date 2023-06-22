@@ -1,0 +1,9 @@
+@import "variable.scss";
+.section-header {
+  margin-bottom: 40px;
+}
+@media(max-width: 1199px ){
+  .section-header {
+    margin-bottom: 20px;
+  }
+}

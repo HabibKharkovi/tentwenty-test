@@ -1,0 +1,57 @@
+.section-swiper-btns .swiper-wrapper {
+  padding-left: 50px; }
+
+.section-swiper-btns .swiper-button-next:after {
+  font-size: 20px;
+  color: #242424; }
+
+.section-swiper-btns .swiper-button-prev:after {
+  font-size: 20px;
+  color: #242424; }
+
+.section-swiper-btns .swiper-button-next:after {
+  font-size: 20px;
+  color: #242424; }
+
+.section-swiper-btns .swiper-button-next, .section-swiper-btns .swiper-button-prev {
+  position: relative;
+  top: unset;
+  left: unset;
+  margin: 0;
+  right: unset; }
+
+.section-swiper-btns .swiper-button-prev {
+  margin-right: 8px; }
+
+.section-swiper-btns .swiper-button {
+  width: 52px;
+  border-radius: 50%;
+  height: 52px;
+  background-color: #F2F2F2; }
+
+.section-swiper-btns .swiper-button > svg {
+  display: none; }
+
+@media (max-width: 990px) {
+  .section-swiper-btns .swiper-wrapper {
+    padding-left: 30px; } }
+
+@media (max-width: 767px) {
+  .section-swiper-btns .swiper-button {
+    width: 30px;
+    height: 30px; }
+  .section-swiper-btns .swiper-button-next:after {
+    font-size: 14px;
+    color: #242424; }
+  .section-swiper-btns .swiper-button-prev:after {
+    font-size: 14px;
+    color: #242424; }
+  .section-swiper-btns .swiper-button-next:after {
+    font-size: 14px;
+    color: #242424; }
+  .section-swiper-btns .swiper-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 99;
+    transform: translateX(-50%); } }
