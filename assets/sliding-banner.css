@@ -1,0 +1,28 @@
+.sliding-banner {
+  padding: 29px 0;
+  margin-bottom: 52px;
+  background-color: #242424; }
+  .sliding-banner__swiper-container {
+    overflow: hidden; }
+  .sliding-banner__list-item {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #FFFFFF;
+    max-width: fit-content;
+    min-width: fit-content;
+    white-space: nowrap; }
+  .sliding-banner strong {
+    color: #D9F801; }
+
+@media screen and (max-width: 990px) {
+  .sliding-banner {
+    padding: 20px 0; }
+    .sliding-banner__list-item {
+      font-size: 16px; } }
+
+@media screen and (max-width: 767px) {
+  .sliding-banner {
+    margin-bottom: 40px; }
+    .sliding-banner__list-item {
+      font-size: 14px; } }
