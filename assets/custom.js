@@ -1,4 +1,4 @@
-const mySwiper = new Swiper ('[js-sliding-banner]', {
+const mySwiper = new Swiper ('[js-marquee]', {
     loop: true, 
     slidesPerView: 'auto',
     spaceBetween: 40,

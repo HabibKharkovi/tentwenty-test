@@ -1,0 +1,123 @@
+.header-section__wrapper {
+  padding: 13px 0; }
+
+.header-section__search {
+  padding: 8px;
+  border: 1px solid #2424241f;
+  border-radius: 11px;
+  max-width: 642px;
+  flex: 642px;
+  margin: 0 20px; }
+
+.header-section__menu-icon {
+  display: none;
+  max-width: 28px;
+  flex: 28px; }
+
+.header-section__logo {
+  max-width: 144px;
+  flex: 144px; }
+
+.header-section___text {
+  font-size: 16px;
+  opacity: unset;
+  display: block; }
+
+.header-section__input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: .2; }
+
+.header-section__border {
+  width: 1px;
+  background-color: #242424;
+  height: 40px;
+  margin: 0 14px;
+  opacity: .2; }
+
+.header-section__icon-wrap {
+  margin: 0 -5px; }
+
+.header-section__search-icon-inner {
+  background-color: #242424;
+  border-radius: 9px;
+  padding: 12px; }
+
+.header-section__arrow {
+  max-width: fit-content;
+  min-width: fit-content;
+  margin-left: 7px; }
+
+.header-section__icon {
+  margin: 0 5px; }
+
+.header-section__icon-inner {
+  max-width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: block;
+  padding: 10px;
+  border: 1px solid #2424241f;
+  border-radius: 11px; }
+
+.header-section__count {
+  top: -6px;
+  right: -6px;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 3px 5px;
+  border: 1px solid #2424241f;
+  border-radius: 4px;
+  background-color: #D9F801; }
+
+.header-section__sub-header {
+  border-top: 1px solid #2424241f; }
+
+.header-section__menu-list {
+  margin: 0 -5px; }
+
+.header-section__menu-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #242424;
+  padding: 20px 5px;
+  display: block; }
+
+@media screen and (max-width: 990px) {
+  .header-section__search-icon-inner {
+    padding: 9px; }
+  .header-section__border {
+    height: 34px; }
+  .header-section__icon-inner {
+    max-width: 38px;
+    height: 38px;
+    min-width: 38px;
+    padding: 6px; }
+  .header-section__count {
+    padding: 1px 4px; }
+  .header-section__menu-link {
+    font-size: 12px; } }
+
+@media screen and (max-width: 767px) {
+  .header-section__search {
+    display: none; }
+  .header-section__hide-icon {
+    display: none; }
+  .header-section__menu-icon {
+    display: block; }
+  .header-section__icon-inner {
+    max-width: 28px;
+    height: 28px;
+    min-width: 28px;
+    padding: 5px;
+    border-radius: 5px; }
+  .header-section__count {
+    font-size: 7px; }
+  .header-section__logo {
+    max-width: 110px;
+    flex: 110px; }
+  .header-section__sub-header {
+    display: none; } }

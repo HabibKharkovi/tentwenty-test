@@ -1,0 +1,117 @@
+{{ 'header-section.css' | asset_url | stylesheet_tag }}
+
+<div class="header-section">
+    <div class="page-width">
+        <div class="header-section__wrapper">
+            <div class="header-section__main-grid flex-between">
+                <div class="header-section__menu-icon cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="24" viewBox="0 0 24 24" width="24"><path d="M4 6H20M4 12H20M4 18H20" stroke="#4A5568" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
+                </div>
+                {%- if section.settings.logo != blank -%}
+                    <div class="header-section__logo">
+                        <a class="header-section__logo-link" href="{{ routes.root_url }}">
+                            <img class="img" src="{{ section.settings.logo | img_url: 'master'}}" alt="">
+                        </a>
+                    </div>
+                <div class="header-section__search flex align-center">
+                    <div class="dropdown cursor-pointer flex align-center">
+                        <span class="header-section__text capitalize">all</span>
+                        <span class="header-section__arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                            <path opacity="0.3" d="M1 1.5L6 6.5L11 1.5" stroke="#242424" stroke-width="1.5"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header-section__border"></div>
+                    <input class="header-section__input" type="text" placeholder="Search something">
+                    <div class="header-section__search-icon cursor-pointer">
+                        <div class="header-section__search-icon-inner flex align-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5796 14.4011L11.2911 10.1126C12.05 9.10764 12.5001 7.85641 12.5001 6.50006C12.5001 3.18635 9.81377 0.500061 6.50006 0.500061C3.18635 0.500061 0.500061 3.18635 0.500061 6.50006C0.500061 9.81377 3.18635 12.5001 6.50006 12.5001C7.85641 12.5001 9.10764 12.05 10.1126 11.2911L14.4011 15.5796L15.5796 14.4011ZM10.8337 6.50014C10.8337 8.89337 8.89362 10.8335 6.50039 10.8335C4.10715 10.8335 2.16705 8.89337 2.16705 6.50014C2.16705 4.10691 4.10715 2.16681 6.50039 2.16681C8.89362 2.16681 10.8337 4.10691 10.8337 6.50014Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-section__icon-wrap flex align-center">
+                    <div class="header-section__icon cursor-pointer position-reletive">
+                        <span class="header-section__icon-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
+                            <path d="M12.0007 4.00008H10.334C10.334 2.15841 8.84232 0.666748 7.00065 0.666748C5.15898 0.666748 3.66732 2.15841 3.66732 4.00008H2.00065C1.08398 4.00008 0.333984 4.75008 0.333984 5.66675V15.6667C0.333984 16.5834 1.08398 17.3334 2.00065 17.3334H12.0007C12.9173 17.3334 13.6673 16.5834 13.6673 15.6667V5.66675C13.6673 4.75008 12.9173 4.00008 12.0007 4.00008ZM7.00065 2.33341C7.91732 2.33341 8.66732 3.08341 8.66732 4.00008H5.33398C5.33398 3.08341 6.08398 2.33341 7.00065 2.33341ZM12.0007 15.6667H2.00065V5.66675H3.66732V7.33342C3.66732 7.79175 4.04232 8.16675 4.50065 8.16675C4.95898 8.16675 5.33398 7.79175 5.33398 7.33342V5.66675H8.66732V7.33342C8.66732 7.79175 9.04232 8.16675 9.50065 8.16675C9.95898 8.16675 10.334 7.79175 10.334 7.33342V5.66675H12.0007V15.6667Z" fill="#242424"/>
+                            </svg>
+                        </span>
+                        <span class="header-section__count position-absolute">4</span>
+                    </div>
+                    <div class="header-section__icon header-section__hide-icon cursor-pointer">
+                        <span class="header-section__icon-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                            <path d="M12.7493 0.5C11.2993 0.5 9.90768 1.175 8.99935 2.24167C8.09102 1.175 6.69935 0.5 5.24935 0.5C2.68268 0.5 0.666016 2.51667 0.666016 5.08333C0.666016 8.23333 3.49935 10.8 7.79102 14.7L8.99935 15.7917L10.2077 14.6917C14.4993 10.8 17.3327 8.23333 17.3327 5.08333C17.3327 2.51667 15.316 0.5 12.7493 0.5ZM9.08268 13.4583L8.99935 13.5417L8.91602 13.4583C4.94935 9.86667 2.33268 7.49167 2.33268 5.08333C2.33268 3.41667 3.58268 2.16667 5.24935 2.16667C6.53268 2.16667 7.78268 2.99167 8.22435 4.13333H9.78268C10.216 2.99167 11.466 2.16667 12.7493 2.16667C14.416 2.16667 15.666 3.41667 15.666 5.08333C15.666 7.49167 13.0493 9.86667 9.08268 13.4583Z" fill="#242424"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="header-section__icon cursor-pointer">
+                        <span class="header-section__icon-inner">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_29_149)">
+                                <path d="M10.0007 4.99992C10.9173 4.99992 11.6673 5.74992 11.6673 6.66658C11.6673 7.58325 10.9173 8.33325 10.0007 8.33325C9.08398 8.33325 8.33398 7.58325 8.33398 6.66658C8.33398 5.74992 9.08398 4.99992 10.0007 4.99992ZM10.0007 13.3333C12.2507 13.3333 14.834 14.4083 15.0007 14.9999H5.00065C5.19232 14.3999 7.75898 13.3333 10.0007 13.3333ZM10.0007 3.33325C8.15898 3.33325 6.66732 4.82492 6.66732 6.66658C6.66732 8.50825 8.15898 9.99992 10.0007 9.99992C11.8423 9.99992 13.334 8.50825 13.334 6.66658C13.334 4.82492 11.8423 3.33325 10.0007 3.33325ZM10.0007 11.6666C7.77565 11.6666 3.33398 12.7833 3.33398 14.9999V16.6666H16.6673V14.9999C16.6673 12.7833 12.2256 11.6666 10.0007 11.6666Z" fill="#242424"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_29_149">
+                                <rect width="20" height="20" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                        </span>
+                    </div>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+    <div class="header-section__sub-header">
+        <div class="page-width">
+            <ul class="header-section__menu-list flex-between">
+                {% for link in linklists[section.settings.choose_menu].links %}
+                    <li class="header-section__menu-item">
+                            <a href="{{ link.url }}" class="header-section__menu-link uppercase">{{ link.title }}</a>
+                        {% if link.links != blank %}
+                        <ul class="child">
+                            {% for child_link in link.links %}  
+                            <li class="header-section__menu-item">
+                                <a href="{{ link.url }}" class="header-section__menu-link uppercase">{{ link.title }}</a>
+                                {% if child_link.links != blank %}
+                                    <ul class="grandchild">
+                                        {% for grandchild_link in child_link.links %}  
+                                            <li class="header-section__menu-item">
+                                                <a href="{{ link.url }}" class="header-section__menu-link uppercase">{{ link.title }}</a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}   
+                            </li>
+                            {% endfor %}
+                        </ul> 
+                        {% endif %} 
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Header section",
+        "settings":[
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Logo"
+            },
+            {
+                "type": "link_list",
+                "id": "choose_menu",
+                "label": "Choose menu"
+            }
+        ]
+    }
+{% endschema %}

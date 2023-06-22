@@ -91,6 +91,13 @@
           "contact": "+971 44532620‬",
           "copy_right_text": "© 2023 StyleHive. All rights reserved"
         }
+      },
+      "header-section": {
+        "type": "header-section",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/Vector.png",
+          "choose_menu": "header-menu"
+        }
       }
     },
     "content_for_index": [

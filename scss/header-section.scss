@@ -1,0 +1,143 @@
+@import "variable.scss";
+.header-section {
+    &__wrapper {
+        padding: 13px 0;
+    }
+    &__search {
+        padding: 8px;
+        border: 1px solid #2424241f;
+        border-radius: 11px;
+        max-width: 642px;
+        flex: 642px;
+        margin: 0 20px;
+    }
+    &__menu-icon {
+        display: none;
+        max-width: 28px;
+        flex: 28px;
+    }
+    &__logo {
+        max-width: 144px;
+        flex: 144px;
+    }
+    &___text {
+        font-size: 16px;
+        opacity: unset;
+        display: block;
+    }
+    &__input {
+        border: none;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+        font-weight: 500;
+        opacity: .2;
+    }
+    &__border {
+        width: 1px;
+        background-color: $Mine-Shaft;
+        height: 40px;
+        margin: 0 14px;
+        opacity: .2;
+    }
+    &__icon-wrap {
+        margin: 0 -5px;
+    } 
+    &__search-icon-inner {
+        background-color: #242424;
+        border-radius: 9px;
+        padding: 12px;
+    }
+    &__arrow {
+        max-width: fit-content;
+        min-width: fit-content;
+        margin-left: 7px;
+    }
+    &__icon {
+        margin: 0 5px;
+    }
+    &__icon-inner {
+        max-width:44px;
+        height: 44px;
+        min-width:44px;
+        display: block;
+        padding: 10px;
+        border: 1px solid #2424241f;
+        border-radius: 11px;
+    }
+    &__count {
+        top: -6px;
+        right: -6px;
+        font-size: 10px;
+        font-weight: 400;
+        padding: 3px 5px;
+        border: 1px solid #2424241f;
+        border-radius: 4px;
+        background-color: #D9F801;
+    }
+    &__sub-header {
+        border-top: 1px solid #2424241f;
+    }
+    &__menu-list {
+        margin: 0 -5px;
+    }
+    &__menu-link {
+        font-size: 14px;
+        font-weight: 700;
+        color: #242424;
+        padding: 20px 5px;
+        display: block;
+    }
+}
+@media screen and (max-width: 990px) {
+    .header-section {
+        &__search-icon-inner {
+            padding: 9px;
+        }
+        &__border {
+            height: 34px;
+        }
+        &__icon-inner {
+            max-width: 38px;
+            height: 38px;
+            min-width: 38px;
+            padding: 6px;
+        }
+        &__count {
+            padding: 1px 4px;
+        }
+        &__menu-link {
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .header-section {
+        &__search {
+            display: none;
+        }
+        &__hide-icon {
+            display: none;
+        }
+        &__menu-icon {
+            display: block;
+        }
+        &__icon-inner {
+            max-width: 28px;
+            height: 28px;
+            min-width: 28px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        &__count {
+            font-size: 7px;
+        }
+        &__logo {
+            max-width: 110px;
+            flex: 110px;
+        }
+        &__sub-header {
+            display: none;
+         }
+    }
+}
