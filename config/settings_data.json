@@ -1,8 +1,104 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "footer-section": {
+        "type": "footer-section",
+        "blocks": {
+          "e15086ce-57b7-4cd3-b8fc-6a778e130b46": {
+            "type": "menu_list",
+            "settings": {
+              "choose_menu": "footer"
+            }
+          },
+          "0a7d1c39-0831-4db3-8c64-42e8cf925993": {
+            "type": "menu_list",
+            "settings": {
+              "choose_menu": "footer-1"
+            }
+          },
+          "e359c1c5-f3bd-4a72-a69d-295656c14f5f": {
+            "type": "menu_list",
+            "settings": {
+              "choose_menu": "footer-menu"
+            }
+          },
+          "e4067bc7-a015-4f8b-b762-afe85e539f70": {
+            "type": "payment_icon",
+            "settings": {
+              "icon": "paypal",
+              "text": "paypal"
+            }
+          },
+          "04fbc94a-edd5-44b0-b10d-c2f11d0e2d70": {
+            "type": "payment_icon",
+            "settings": {
+              "icon": "visa",
+              "text": "Visa"
+            }
+          },
+          "8301d45b-e0bb-4656-a9db-254da135b000": {
+            "type": "payment_icon",
+            "settings": {
+              "icon": "mastercard",
+              "text": "MasterCard"
+            }
+          },
+          "06176dba-40a1-4a13-90e9-90fff76d537e": {
+            "type": "payment_icon",
+            "settings": {
+              "icon": "cash_delivery",
+              "text": "Cash On Delivery"
+            }
+          },
+          "b102305a-bc82-403b-bff8-2c6adc024100": {
+            "type": "text",
+            "settings": {
+              "text": "Terms & Conditions",
+              "link": ""
+            }
+          },
+          "e785cf51-4562-4c7d-b3a4-b10f54ec94f0": {
+            "type": "text",
+            "settings": {
+              "text": "Privacy Policy",
+              "link": ""
+            }
+          },
+          "00e180e8-9dc4-4970-9cf2-e1e7cfe90b1d": {
+            "type": "text",
+            "settings": {
+              "text": "About Us",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "e15086ce-57b7-4cd3-b8fc-6a778e130b46",
+          "0a7d1c39-0831-4db3-8c64-42e8cf925993",
+          "e359c1c5-f3bd-4a72-a69d-295656c14f5f",
+          "e4067bc7-a015-4f8b-b762-afe85e539f70",
+          "04fbc94a-edd5-44b0-b10d-c2f11d0e2d70",
+          "8301d45b-e0bb-4656-a9db-254da135b000",
+          "06176dba-40a1-4a13-90e9-90fff76d537e",
+          "b102305a-bc82-403b-bff8-2c6adc024100",
+          "e785cf51-4562-4c7d-b3a4-b10f54ec94f0",
+          "00e180e8-9dc4-4970-9cf2-e1e7cfe90b1d"
+        ],
+        "settings": {
+          "title": "24\/7 Support",
+          "text": "stylehive@support",
+          "url": "",
+          "contact": "+971 44532620‬",
+          "copy_right_text": "© 2023 StyleHive. All rights reserved"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
     "Default": {
-      
     }
   }
 }
