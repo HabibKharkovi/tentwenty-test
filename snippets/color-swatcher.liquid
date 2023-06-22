@@ -1,0 +1,10 @@
+<style>
+{% for color in shop.metaobjects.swatcher_colors.values %}
+  {% assign colorName = color.color_name2 | downcase | handle %}
+  .{{colorName}} {
+    background-color: {{ color.color }};
+  }
+{% endfor %}
+</style>
+
+

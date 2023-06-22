@@ -61,36 +61,7 @@
       "settings": {
       }
     },
-    "e96d36cb-2aaf-40c1-96fb-34aae166590f": {
-      "type": "featured-collections",
-      "blocks": {
-        "847848e9-e6a4-4b82-8be8-ebd89ac294d0": {
-          "type": "collections",
-          "settings": {
-            "choose_collection": "kids"
-          }
-        },
-        "eeebe4d2-0daf-42fa-a1bf-ac82f96e7f81": {
-          "type": "collections",
-          "settings": {
-            "choose_collection": "frontpage"
-          }
-        },
-        "ed6c0197-669f-4857-911b-248233a571a5": {
-          "type": "collections",
-          "settings": {
-            "choose_collection": "good-time"
-          }
-        }
-      },
-      "block_order": [
-        "847848e9-e6a4-4b82-8be8-ebd89ac294d0",
-        "eeebe4d2-0daf-42fa-a1bf-ac82f96e7f81",
-        "ed6c0197-669f-4857-911b-248233a571a5"
-      ],
-      "settings": {
-      }
-    },
+
     "82d1fdb9-822e-4e2c-828d-576446ba9ee1": {
       "type": "featured-blog",
       "settings": {
@@ -103,7 +74,6 @@
   "order": [
     "17f38c5e-141b-48bc-b506-46ef759e81a4",
     "421bc3b0-ce0e-4648-911e-b9fca8a8214e",
-    "e96d36cb-2aaf-40c1-96fb-34aae166590f",
     "82d1fdb9-822e-4e2c-828d-576446ba9ee1"
   ]
 }
