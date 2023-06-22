@@ -1,6 +1,3 @@
-.section-swiper-btns .swiper-wrapper {
-  padding-left: 50px; }
-
 .section-swiper-btns .swiper-button-next:after {
   font-size: 20px;
   color: #242424; }
@@ -27,14 +24,15 @@
   width: 52px;
   border-radius: 50%;
   height: 52px;
-  background-color: #F2F2F2; }
+  background-color: #F2F2F2;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; }
+  .section-swiper-btns .swiper-button:hover {
+    background-color: #D9F801;
+    transition: all 0.3s ease-in-out; }
 
 .section-swiper-btns .swiper-button > svg {
   display: none; }
-
-@media (max-width: 990px) {
-  .section-swiper-btns .swiper-wrapper {
-    padding-left: 30px; } }
 
 @media (max-width: 767px) {
   .section-swiper-btns .swiper-button {

@@ -1,0 +1,31 @@
+<div class="variant-wrapper">
+    {% for option in product.options_with_values %}
+        <div class="selector-wrapper js product-form__item">
+          {% if option.name == 'Color' %}
+            <div js-selector-wrapper class="color-swatch space-bottom flex" >
+              {% for value in option.values %}
+                <div class="color-wrap flex  align-center flex-center">
+                  <input data-option-index="option{{ option.position }}" js-swatch-input id="{{option.name}}-{{value}}_{{product.id}}" type="radio"  value="{{ value }}" name="{{option.name}}_{{product.id}}" style="display: none" {% if forloop.first == true %} checked {% endif %}>
+                  <label js-swatch-btn for="{{option.name}}-{{value}}_{{product.id}}" class="{{ value | handle }} col color-switcher {% if forloop.first == true %} selected{% endif %}">
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+          {% if option.name == 'Size' %}
+            <div js-selector-wrapper class="variant-wrapper flex" data-name="{{ option.name }}">
+              {% for value in option.values %}
+               <div class="variant-wrap flex align-center flex-center">
+                <input data-option-index="option{{ option.position }}" js-swatch-input id="{{option.name}}-{{value}}_{{product.id}}" type="radio"  value="{{ value }}" name="{{option.name}}_{{product.id}}" style="display: none" {% if forloop.first == true %} checked {% endif %}>
+                <label js-swatch-btn for="{{option.name}}-{{value}}_{{product.id}}" class="{{ value | handle }} col btn-switcher {% if forloop.first == true %} selected{% endif %}">
+                  {{ value }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+  </div>
+
+  <div js-product-json style="display: none">{{ product | json }}</div>

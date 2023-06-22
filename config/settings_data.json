@@ -1,8 +1,10 @@
 {
   "current": {
+    "type_header_font": "roboto_n4",
+    "type_body_font": "roboto_n4",
     "sections": {
-      "footer-section": {
-        "type": "footer-section",
+      "footer": {
+        "type": "footer",
         "blocks": {
           "e15086ce-57b7-4cd3-b8fc-6a778e130b46": {
             "type": "menu_list",
@@ -92,8 +94,8 @@
           "copy_right_text": "© 2023 StyleHive. All rights reserved"
         }
       },
-      "header-section": {
-        "type": "header-section",
+      "header": {
+        "type": "header",
         "settings": {
           "logo": "shopify:\/\/shop_images\/Vector.png",
           "choose_menu": "header-menu"

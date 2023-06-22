@@ -8,9 +8,11 @@
       <link rel="canonical" href="{{ canonical_url }}">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
       
-      {{ 'common.css' | asset_url | stylesheet_tag }}
+      {%- render 'seo-title' -%}
+
+      {{ 'base.css' | asset_url | stylesheet_tag }}
   
-      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js" defer></script>
       <script src="{{ 'custom.js' | asset_url }}" defer></script>
   
       {{ content_for_header }}
@@ -25,8 +27,8 @@
     
     <body>
         {% render 'color-swatcher' %}
-        {% section 'header-section' %}    
+        {% section 'header' %}    
         {{ content_for_layout }}
-        {% section 'footer-section' %}
+        {% section 'footer' %}
     </body>
   </html>

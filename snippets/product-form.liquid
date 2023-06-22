@@ -1,0 +1,40 @@
+{%- form 'product', product, id: form_id, class: 'product-single__form' -%}
+
+    {% assign current_variant = product.variants[0] %}
+
+    {%- liquid
+    assign button_text = 'Add To Cart'
+    unless current_variant.available
+        assign button_text = 'Sold Out'
+    endunless
+    -%}
+
+    <button
+    type="submit"
+    js-add-to-cart
+    class="btn add-to-cart"
+    {% unless current_variant.available %} disabled="disabled"{% endunless %}>
+    <span js-add-to-cart-text>
+        {{ button_text }}
+    </span>
+    </button>
+  
+   
+    <select data-product-id="{{ product.id }}" style="display: none" >
+      {%- for variant in product.variants -%}
+        {%- if variant.available -%}
+          <option {% if variant == product.selected_or_first_available_variant %}
+            selected="selected"{% endif %}
+            value="{{ variant.id }}">
+            {{ variant.title }} - {{ variant.price | money_with_currency }}
+          </option>
+        {%- else -%}
+          <option disabled="disabled">
+            {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+          </option>
+        {%- endif -%}
+      {%- endfor -%}
+    </select>
+
+{%- endform -%}
+  

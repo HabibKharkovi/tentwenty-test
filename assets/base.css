@@ -77,6 +77,51 @@ svg {
 .position-absolute {
   position: absolute; }
 
+.justify-between {
+  justify-content: space-between; }
+
+.btn {
+  z-index: 9;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  height: 50px;
+  color: #242424;
+  border-radius: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 40px;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  border: none; }
+  .btn:hover {
+    background-color: #D9F801; }
+
+.success-add-to-cart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: green;
+  color: #fff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 7px; }
+
+.fail-add-to-cart {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 40px;
+  background-color: red;
+  color: #fff;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border-radius: 7px; }
+
 @media screen and (max-width: 990px) {
   .page-width {
     padding: 0 30px; }

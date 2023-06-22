@@ -1,7 +1,12 @@
-<div class="product-wrap " >
-  <a class="image-wrap border-radius_l" href="{{ product.url }}">
-    <img class="img" src="{{ product.featured_image | img_url: 'master'}}"/>
-  </a>
+
+{%- capture form_id -%}AddToCartForm-{{ section.id }}-{{ product.id }}{%- endcapture -%}
+<div class="product-wrap product-item" js-product data-product-id="{{ product.id }}" >
+  <span class="image-wrap border-radius_l">
+    <span class="badge capitalize border-radius_s">best seller</span>
+    <img class="img" src="{{ product.featured_image | img_url: 'master'}}" alt="{{ product.title }}" loading="lazy" />
+    <a  href="{{ product.url }}" class="layout"></a>
+    {% render "product-form" as product: product, form_id: form_id %}
+  </span>
   <div class="meta">
     <div class="sub-text-wrap space-bottom flex justify-between align-center">
       <h3 class="sub-text  heading-s uppercase">{{product.title}}</h3>
@@ -13,31 +18,8 @@
     </div>
     <h3 class="product-title space-bottom heading-s capitalize">{{ product.description }}</h3>
     
-       <div class="variant-wrapper">
-        {% for option in product.options_with_values %}
-            <div class="selector-wrapper js product-form__item">
-              {% if option.name == 'Color' %}
-                <div class="color-swatch space-bottom flex" >
-                  {% for value in option.values %}
-                    <div class="color-wrap flex  align-center flex-center">
-                      <div class="{{ value | handle }} col">
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
-              {% endif %}
-              {% if option.name == 'Size' %}
-                <div class="variant-wrapper flex" data-name="{{ option.name }}" data-index="option{{ forloop.index }}">
-                  {% for value in option.values %}
-                   <div class="variant-wrap flex align-center flex-center">
-                    <div class="variant" value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>{{ value }}</div>
-                  </div>
-                  {% endfor %}
-                </div>
-              {% endif %}
-            </div>
-          {% endfor %}
-      </div> 
+    {% render "options" as product: product %}
+    
   </div>
 </div>
 

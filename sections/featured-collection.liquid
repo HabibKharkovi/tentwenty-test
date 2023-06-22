@@ -23,7 +23,7 @@
           <div class="product-wrapper flex justify-between">
             {% for block in section.blocks %}
               {% assign product = block.settings.choose_product %}
-              {% render 'product-item' product: product %}
+              {% render 'product-item' product: product, section: section %}
             {% endfor %}
           </div>
         </div>

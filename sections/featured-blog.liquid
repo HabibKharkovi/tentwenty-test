@@ -33,7 +33,7 @@
                                 <div class="blog-section__blog-item swiper-slide">
                                     <a href="" class="main-blog-link">
                                         <div class="blog-section__blog-image border-radius_l">
-                                            <img src="{{ article.image | img_url: 'master'}}" alt="" class="blog-section__img img uppercase">
+                                            <img loading="lazy" src="{{ article.image | img_url: 'master'}}" alt="{{ article.title }}" class="blog-section__img img uppercase">
                                         </div>
                                         <div class="blog-section__blog-article">
                                             <span class="blog-section__date">{{ article.published_at }}</span>

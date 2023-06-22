@@ -28,7 +28,12 @@
     background-color: #F2F2F2;
     margin: 0 4px;
     padding: 18px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; }
+    .blog-section__arrow:hover {
+      background-color: #D9F801;
+      transition: all 0.3s ease-in-out; }
   .blog-section__icon {
     height: 100%; }
   .blog-section__blog-article {

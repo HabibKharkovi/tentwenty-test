@@ -3,6 +3,9 @@
   .collections__main-grid {
     margin: 0 -15px;
     flex-wrap: wrap; }
+  .collections__image {
+    position: relative;
+    overflow: hidden; }
   .collections__row-wrap {
     position: relative;
     max-width: 50%;
@@ -20,22 +23,11 @@
     letter-spacing: 0;
     color: #FFFFFF;
     max-width: 480px;
-    top: 30px;
+    top: 35px;
     left: 30px; }
-  .collections__btn {
-    font-size: 16px;
-    padding: 15px 24px;
-    background: #FFFFFF;
-    color: #242424;
-    font-weight: 700;
-    display: block;
-    max-width: fit-content;
+  .collections .btn {
     bottom: 30px;
     left: 30px; }
-    .collections__btn:hover {
-      background-color: #557DCB;
-      color: #FFFFFF;
-      border: 1px solid #242424; }
 
 @media screen and (max-width: 1279px) {
   .collections__title {
@@ -51,7 +43,7 @@
     .collections__title {
       font-size: 28px;
       max-width: 300px; }
-    .collections__btn {
+    .collections .btn {
       font-size: 14px;
       padding: 12px 20px; } }
 
@@ -69,8 +61,10 @@
       font-size: 24px;
       top: 20px;
       left: 20px; }
-    .collections__btn {
+    .collections .btn {
       font-size: 14px;
-      padding: 12px 18px;
+      padding: 8px 18px;
       bottom: 20px;
-      left: 20px; } }
+      left: 20px; }
+    .collections__image img {
+      min-height: 225px; } }

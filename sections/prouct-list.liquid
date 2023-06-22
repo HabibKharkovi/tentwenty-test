@@ -8,75 +8,39 @@
     <div class="section-header flex-between">
       {% if section.settings.title != blank  %}
         <h2 class="heading-L section-title uppercase">{{ section.settings.title }}</h2>
-      <div class="swiper-buttons flex">
-        <div class="swiper-button-prev swiper-button flex flex-center align-center" id="arrowPrev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-            <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
-          </svg>
-        </div>
-        <div class="swiper-button-next swiper-button flex flex-center align-center" id="arrowNext" >
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-            <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
-          </svg>
-        </div>
-      </div>
-    {% endif %}
-    </div>
-  </div>
-  <div class="contents-wrapper">
-    <div class="wrapper">
-      <div  id="SliderFeaturedCollection" class="featured-slider">
-          <div class="swiper-wrapper">
-            {% if section.settings.choose_collection != blank %}
-              {% for product in collections[section.settings.choose_collection].products %}
-                <div class="swiper-slide">
-                  <span class="badge capitalize border-radius_s">best seller</span>
-                  {% render 'product-item' product: product %}
-                </div>
-              {% endfor %}
-            {% endif %}
-            </div>
+        <div class="swiper-buttons flex">
+          <div class="swiper-button-prev swiper-button flex flex-center align-center" id="arrowPrev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
+            </svg>
           </div>
+          <div class="swiper-button-next swiper-button flex flex-center align-center" id="arrowNext" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+              <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
+            </svg>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="contents-wrapper">
+      <div class="wrapper">
+        <div js-featured-collection-slider class="featured-slider">
+            <div class="swiper-wrapper">
+              {% if section.settings.choose_collection != blank %}
+                {% for product in collections[section.settings.choose_collection].products %}
+                  <div class="swiper-slide">
+                    {% render 'product-item' product: product, section: section %}
+                  </div>
+                {% endfor %}
+              {% endif %}
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-<script>
-  var sliderFeaturedCollection = new Swiper("#SliderFeaturedCollection", {
-    spaceBetween: 30,
-    loop: false,
-    breakpoints: {
-      360: {
-        spaceBetween: 10,
-        slidesPerView: 1.2
-      },
-        480: {
-            spaceBetween: 15,
-            slidesPerView: 2.3
-        },
-        768: {
-            slidesPerView: 3.3,
-            spaceBetween: 15,
-        },
-        990: {
-            spaceBetween: 20,
-            slidesPerView: 3.3,
-        },
-        1200: {
-            spaceBetween: 20,
-            slidesPerView: 4.3,
-        },
-        1281:{
-            spaceBetween: 30,
-            slidesPerView: 4.3,
-        }
-      },
-    navigation: {
-        nextEl: "#arrowNext",
-        prevEl: "#arrowPrev",
-      }
-  });
-</script>
+
 {% schema %}
   {
     "name": "Collection Slider",

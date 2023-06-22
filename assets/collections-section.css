@@ -33,4 +33,6 @@
     margin-bottom: 50px;
     position: relative; }
     .category-section .slider {
-      padding-bottom: 50px; } }
+      padding-bottom: 50px; }
+    .category-section .page-width {
+      padding-right: 0; } }

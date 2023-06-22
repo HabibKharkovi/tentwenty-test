@@ -1,8 +1,5 @@
 @import "variable.scss";
 .section-swiper-btns{
-  .swiper-wrapper {
-    padding-left: 50px;
-  }
   .swiper-button-next {
     &:after {
      font-size: 20px;
@@ -36,16 +33,15 @@
     border-radius: 50%;
     height: 52px;
     background-color: $White-Smoke;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $Chartreuse-Yellow;
+      transition: all 0.3s ease-in-out;
+    }
   }
   .swiper-button > svg {
     display: none;
-  }
-}
-@media(max-width: 990px ){
-  .section-swiper-btns {
-    .swiper-wrapper {
-      padding-left: 30px;
-    }
   }
 }
 @media(max-width: 767px ){

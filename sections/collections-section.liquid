@@ -20,66 +20,34 @@
           </svg>
         </div>
         </div>
+      </div> 
+
+      <div class="category-contents">
+        <div class="slider" js-catagory-slider >
+          <div class="wrapper swiper-wrapper">
+            {% for block in section.blocks %}
+              {% if block.type == 'choose-collection' %}
+                {% assign collection = collections[block.settings.choose_collection] %}
+                <div class="item-wrap swiper-slide">
+                  <a class="item " href="{{ collection.url }}">
+                    {% if collection.featured_image != blank %}
+                      <div class="image-wrap border-radius_l  ">
+                        <img loading="lazy" class="img" src="{{ collection.featured_image | img_url: 'master'}}" alt="{{ collection.title }}"/>
+                      </div>
+                    {% endif %}
+                    {% if collection.title != blank %}
+                      <h3 class="pre-title text-align capitalize">{{ collection.title }}</h3>
+                    {% endif %}
+                  </a>
+                </div>
+              {% endif %}
+          {% endfor %}
+          </div>
+        </div>
       </div>
-  </div>
-  <div class="category-contents">
-    <div class="slider" id="categorySlider">
-      <div class="wrapper swiper-wrapper">
-        {% for block in section.blocks %}
-          {% if block.type == 'choose-collection' %}
-            {% assign collection = collections[block.settings.choose_collection] %}
-            <div class="item-wrap swiper-slide">
-              <a class="item " href="{{ collection.url }}">
-                {% if collection.featured_image != blank %}
-                  <div class="image-wrap border-radius_l  ">
-                    <img class="img" src="{{ collection.featured_image | img_url: 'master'}}"/>
-                  </div>
-                {% endif %}
-                {% if collection.title != blank %}
-                  <h3 class="pre-title text-align capitalize">{{ collection.title }}</h3>
-                {% endif %}
-              </a>
-            </div>
-          {% endif %}
-      {% endfor %}
-      </div>
-    </div>
   </div>
 </div>
-<script>
-  var categorySlider = new Swiper("#categorySlider", {
-    slidesPerView: 5.4,
-    loop: false,
-    breakpoints: {
-        360: {
-          slidesPerView: 1.17,
-          spaceBetween: 10,
-        },
-        480: {
-            spaceBetween: 15,
-            slidesPerView: 2.18
-        },
-        768: {
-            slidesPerView: 3.3,
-            spaceBetween: 15,
-        },
-        990: {
-            slidesPerView: 4.4,
-            spaceBetween: 20,
-        },
-        1200: {
-          spaceBetween: 20,
-        },
-        1280: {
-            spaceBetween: 30,
-        },
-      },
-    navigation: {
-        nextEl: "#nextArrow",
-        prevEl: "#prevArrow",
-      }
-  })
-</script>
+
 {% schema %}
   {
     "name": "Category Section",

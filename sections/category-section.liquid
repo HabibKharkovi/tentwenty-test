@@ -9,19 +9,19 @@
                         <div class="collections__row-wrap position-reletive">
                             <div class="collections__image border-radius_l">
                                 {%- if collection.featured_image != blank -%}
-                                <img class="collections_img img" src="{{ collection.featured_image | img_url: 'master'}}" alt="">
+                                <img loading="lazy" class="collections_img img" src="{{ collection.featured_image | img_url: 'master'}}" alt="{{ collection.title }}">
                                 {%- else -%}
                                     {{ 'product-1' | placeholder_svg_tag }}
                                 {%- endif -%}
-                            </div>
-                            {%- if collection.title != blank -%}
-                                <div class="collections__content-wrap flex align-center">
-                                    <div class="collections__content-inner">
-                                        <h2 class="collections__title uppercase position-absolute ">{{ collection.title }}</h2>
-                                        <a href="{{ collection.url }}" class="collections__btn cursor-pointer capitalize border-radius_s position-absolute">Explore Collection</a>
+                                {%- if collection.title != blank -%}
+                                    <div class="collections__content-wrap flex align-center">
+                                        <div class="collections__content-inner">
+                                            <h2 class="collections__title uppercase position-absolute ">{{ collection.title }}</h2>
+                                            <a href="{{ collection.url }}" class="btn cursor-pointer capitalize border-radius_s position-absolute">Explore Collection</a>
+                                        </div>
                                     </div>
-                                </div>
-                            {%- endif -%}
+                                {%- endif -%}
+                            </div>
                         </div>
                 {%- endfor -%}
             </div>

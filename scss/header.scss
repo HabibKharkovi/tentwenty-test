@@ -1,14 +1,18 @@
 @import "variable.scss";
-.header-section {
-    padding: 13px 0;
-    border-bottom: 1px solid #2424241f;
+.header {
+    > .page-width {
+        padding: 0 30px;
+    }
+    &__wrapper {
+        padding: 13px 0;
+    }
     &__search {
-        padding: 8px;
-        border: 1px solid #2424241f; 
+        padding: 5px 5px 5px 15px;
+        border: 1px solid #2424241f;
         border-radius: 11px;
         max-width: 642px;
         flex: 642px;
-        margin: 0 20px; 
+        margin: 0 20px;
     }
     &__menu-icon {
         display: none;
@@ -17,7 +21,7 @@
     }
     &__logo {
         max-width: 144px;
-        flex: 144px;
+        flex: 144px; 
     }
     &___text {
         font-size: 16px;
@@ -74,9 +78,41 @@
         border-radius: 4px;
         background-color: #D9F801;
     }
+    &__sub-header {
+        border-top: 1px solid #2424241f;
+    }
+    &__menu-list {
+        margin: 0 -5px;
+    }
+    &__menu-link {
+        font-size: 14px;
+        font-weight: 700;
+        color: #242424;
+        padding: 20px 30px;
+        display: block;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: transparent;
+            height: 5px;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transition: 0.2s all ease-in-out;
+        } 
+        &:hover {
+            &::after {
+                background-color: #242424;
+            }
+        }
+    }
+    &__text {
+        font-weight: bold;
+    }
 }
 @media screen and (max-width: 990px) {
-    .header-section {
+    .header {
         &__search-icon-inner {
             padding: 9px;
         }
@@ -92,10 +128,13 @@
         &__count {
             padding: 1px 4px;
         }
+        &__menu-link {
+            font-size: 12px;
+        }
     }
 }
 @media screen and (max-width: 767px) {
-    .header-section {
+    .header {
         &__search {
             display: none;
         }
@@ -119,31 +158,11 @@
             max-width: 110px;
             flex: 110px;
         }
-    }
-}
-
-
-.sub-header {
-    &__menu-list {
-        margin: 0 -5px;
-    }
-    &__menu-link {
-        font-size: 14px;
-        font-weight: 700;
-        color: #242424;
-        padding: 20px 5px;
-        display: block;
-    }
-}
-@media screen and (max-width: 990px) {
-    .sub-header {
-        &__menu-link {
-            font-size: 12px;
+        &__sub-header {
+            display: none;
         }
-    }
-}
-@media screen and (max-width: 767px) {
-    .sub-header {
-       display: none;
+        >.page-width {
+            padding: 0 20px;
+        }
     }
 }
