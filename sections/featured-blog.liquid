@@ -1,0 +1,85 @@
+{{ 'featured-blog-section.css' | asset_url | stylesheet_tag }}
+
+<div class="blog-section">
+    <div class="blog-section__container page-width">
+        <div class="blog-section__wrapper">
+            <div class="blog-section__main-grid">
+                {%- unless section.settings.title == blank -%}
+                    <div class="blog-section__blog-header flex-between">
+                        <h3 class="blog-section__title uppercase heading-L ">{{ section.settings.title }}</h3>
+                        <div class="blog-section__icon-wrap flex align-center">
+                           {%- if section.settings.blog != blank -%}
+                                <a href ="{{ section.settings.blog.url }}" class="blog-section__text capitalize">{{ section.settings.text }}</a>
+                                <div class="blog-section__arrows flex">
+                                    <div class="arrow-left blog-section__arrow cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                                        <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="arrow-right blog-section__arrow cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                                        <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            {%- endif -%}
+                        </div>
+                    </div>
+                {%- endunless -%}
+                {%- if section.settings.blog != blank -%}
+                    <div class="blog-section__grid-wrap swiper-container flex" js-blog-sliding-banner> 
+                        <div class="swiper-wrapper">
+                            {%- for article in section.settings.blog.articles -%}
+                                <div class="blog-section__blog-item swiper-slide">
+                                    <a href="" class="main-blog-link">
+                                        <div class="blog-section__blog-image border-radius_l">
+                                            <img src="{{ article.image | img_url: 'master'}}" alt="" class="blog-section__img img uppercase">
+                                        </div>
+                                        <div class="blog-section__blog-article">
+                                            <span class="blog-section__date">{{ article.published_at }}</span>
+                                            <!-- <span class="blog-section__blog-author"></span> -->
+                                            <div class="blog-section__excpert">{{ article.excerpt }}</div>
+                                            <div class="blog-section__content">{{ article.content }}</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                {%- else -%}
+                        <div class="placeholder-image">
+                            {{ 'product-1' | placeholder_svg_tag }}
+                        </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+ </div>
+
+ {% schema %}
+    {
+        "name": "Featured blog",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text"
+            },
+            {
+                "type": "blog",
+                "id": "blog",
+                "label": "Blog"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured blog"
+            }
+        ]
+    }
+ {% endschema %}
