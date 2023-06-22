@@ -1,0 +1,87 @@
+@import "var.scss";
+.hero-banner {
+    &__bg-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 643px;
+        height: 1px;
+    }
+    &__container {
+        height: 100%;
+    }
+    &__wrapper {
+        height: 100%;
+    }
+    &__content-wrap {
+        height: 100%;
+    }
+    &__title {
+        font-size: 64px;
+        font-weight: 800;
+        margin-bottom: 16px;
+        line-height: 1;
+        letter-spacing: 0;
+        color: #FFFFFF;
+        max-width: 600px;
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $white;
+        margin-bottom: 40px;
+        max-width: 350px;
+    }
+    &__btn {
+        font-size: 16px;
+        padding: 12px 36px;
+        background: $white;
+        color: $Mine-Shaft;
+        font-weight: 700;
+        border-radius: 12px;
+        display: block;
+        max-width: fit-content;
+        &:hover {
+            background-color: $Indigo;
+            color: $white;
+            border: 1px solid $Mine-Shaft;
+        }
+    }
+}
+@media screen and (max-width:990px) {
+    .hero-banner {
+        &__bg-image {
+            min-height: 380px;
+        }
+        &__title {
+            font-size: 36px;
+            max-width: 470px;
+        }
+        &__text {
+            font-size: 14px;
+            max-width: 300px;
+        }
+    }
+}
+@media screen and (max-width:767px) {
+    .hero-banner {
+        &__bg-image {
+            min-height: 250px;
+        }
+        &__title {
+            font-size: 24px;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 12px;
+            max-width: 255px;
+            margin-bottom: 16px;
+        }
+        &__btn {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+    }
+}
