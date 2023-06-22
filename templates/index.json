@@ -3,7 +3,7 @@
     "17f38c5e-141b-48bc-b506-46ef759e81a4": {
       "type": "hero-banner",
       "settings": {
-        "bg_image": "shopify:\/\/shop_images\/Rectangle_2966_2.png",
+        "bg_image": "shopify:\/\/shop_images\/Frame_19625836.png",
         "title": "Products to awake your authentic self",
         "text": "Why you should hire an expert for your next home interior project.",
         "link_text": "Shop Now",
@@ -61,7 +61,122 @@
       "settings": {
       }
     },
-
+    "1f53f5ae-f0cf-4fad-9298-023cd605a285": {
+      "type": "prouct-list",
+      "settings": {
+        "title": "Heavy Hitters",
+        "choose_collection": "t-shirts"
+      }
+    },
+    "1ef9f94b-c3b8-4730-84ac-0a315ae44a70": {
+      "type": "category-section",
+      "blocks": {
+        "164e6c45-fa96-4811-acc2-26755baf31ea": {
+          "type": "collections",
+          "settings": {
+            "choose_collection": "kids"
+          }
+        },
+        "6515fa5f-4c48-44d2-a618-8e14ebe3c3c6": {
+          "type": "collections",
+          "settings": {
+            "choose_collection": "frontpage"
+          }
+        },
+        "1041ec0c-92ef-4cac-9342-ac0f50d459d8": {
+          "type": "collections",
+          "settings": {
+            "choose_collection": "good-time"
+          }
+        }
+      },
+      "block_order": [
+        "164e6c45-fa96-4811-acc2-26755baf31ea",
+        "6515fa5f-4c48-44d2-a618-8e14ebe3c3c6",
+        "1041ec0c-92ef-4cac-9342-ac0f50d459d8"
+      ],
+      "settings": {
+      }
+    },
+    "523478ea-455b-418f-a4da-afe75ece4ee7": {
+      "type": "collections-section",
+      "blocks": {
+        "02692a58-ff37-4277-9052-cb6a7e31ed9d": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "t-shirts"
+          }
+        },
+        "d2c6d645-cd13-4e52-8fe4-4eeee20cd304": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "accessories"
+          }
+        },
+        "d7766c9f-2fe7-45a6-a0e9-993750d36b65": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "nightwear"
+          }
+        },
+        "4e3922e3-d325-43fb-9e61-6aa8af1dd8ff": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "loungewear"
+          }
+        },
+        "42728afa-7c7c-41aa-866a-f47c4582b355": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "nightwear"
+          }
+        },
+        "50a954dc-32ca-44f4-baa9-90b8b67e601f": {
+          "type": "choose-collection",
+          "settings": {
+            "choose_collection": "bags"
+          }
+        }
+      },
+      "block_order": [
+        "02692a58-ff37-4277-9052-cb6a7e31ed9d",
+        "d2c6d645-cd13-4e52-8fe4-4eeee20cd304",
+        "d7766c9f-2fe7-45a6-a0e9-993750d36b65",
+        "4e3922e3-d325-43fb-9e61-6aa8af1dd8ff",
+        "42728afa-7c7c-41aa-866a-f47c4582b355",
+        "50a954dc-32ca-44f4-baa9-90b8b67e601f"
+      ],
+      "settings": {
+        "title": "Popular categories"
+      }
+    },
+    "f9fefc03-7b93-41ad-a19d-a24a437f7ef1": {
+      "type": "featured-collection",
+      "blocks": {
+        "d93845fc-ce0a-4178-8e90-4e0164ce7953": {
+          "type": "item",
+          "settings": {
+            "choose_product": "product-1"
+          }
+        },
+        "95904de0-7f39-49e0-8449-3cc1b9a2dc8f": {
+          "type": "item",
+          "settings": {
+            "choose_product": "product-5"
+          }
+        }
+      },
+      "block_order": [
+        "d93845fc-ce0a-4178-8e90-4e0164ce7953",
+        "95904de0-7f39-49e0-8449-3cc1b9a2dc8f"
+      ],
+      "settings": {
+        "title": "Halloween’s Creepin’ Up",
+        "image": "shopify:\/\/shop_images\/Rectangle_2966.png",
+        "btn_text": "Explore Collection",
+        "btn_url": ""
+      }
+    },
     "82d1fdb9-822e-4e2c-828d-576446ba9ee1": {
       "type": "featured-blog",
       "settings": {
@@ -69,11 +184,27 @@
         "text": "View All",
         "blog": "news"
       }
+    },
+    "1552d4d6-b854-484a-9f22-5962f7cb9dd3": {
+      "type": "newsletter-section",
+      "custom_css": [
+
+      ],
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/Image.png",
+        "title": "Subscribe to receive our latest news & items updates",
+        "btn_text": "subscribe"
+      }
     }
   },
   "order": [
     "17f38c5e-141b-48bc-b506-46ef759e81a4",
     "421bc3b0-ce0e-4648-911e-b9fca8a8214e",
-    "82d1fdb9-822e-4e2c-828d-576446ba9ee1"
+    "1f53f5ae-f0cf-4fad-9298-023cd605a285",
+    "1ef9f94b-c3b8-4730-84ac-0a315ae44a70",
+    "523478ea-455b-418f-a4da-afe75ece4ee7",
+    "f9fefc03-7b93-41ad-a19d-a24a437f7ef1",
+    "82d1fdb9-822e-4e2c-828d-576446ba9ee1",
+    "1552d4d6-b854-484a-9f22-5962f7cb9dd3"
   ]
 }

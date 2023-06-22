@@ -8,19 +8,19 @@
     <div class="section-header flex-between">
       {% if section.settings.title != blank  %}
         <h2 class="heading-L section-title uppercase">{{ section.settings.title }}</h2>
-      {% endif %}
       <div class="swiper-buttons flex">
-      <div class="swiper-button-prev swiper-button flex flex-center align-center" id="arrowPrev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-          <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
-        </svg>
+        <div class="swiper-button-prev swiper-button flex flex-center align-center" id="arrowPrev">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+            <path d="M9 1L2 8L9 15" stroke="#242424" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next swiper-button flex flex-center align-center" id="arrowNext" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
+            <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
+          </svg>
+        </div>
       </div>
-      <div class="swiper-button-next swiper-button flex flex-center align-center" id="arrowNext" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
-          <path d="M1 1L8 8L1 15" stroke="#242424" stroke-width="1.5"/>
-        </svg>
-      </div>
-      </div>
+    {% endif %}
     </div>
   </div>
   <div class="contents-wrapper">
