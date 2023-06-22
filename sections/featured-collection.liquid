@@ -1,0 +1,82 @@
+{{ 'featured-collection.css' | asset_url | stylesheet_tag }}
+{{ 'product-item.css' | asset_url | stylesheet_tag }}
+<div class="featured-collection">
+  <div class="page-width">
+    <div class="wrapper flex-between">
+      <div class="alpha content-wrap">
+        <div class="image-wrapper border-radius_l">
+          {% if section.settings.title != blank %}
+            <h2 class="title uppercase">{{ section.settings.title }}</h2>
+          {% endif %}
+          {% if section.settings.image != blank %}
+            <div class="img-wrap border-radius_l">
+              <img class="img border-radius_l" src="{{ section.settings.image | img_url: 'master'}}"/>
+            </div>
+          {% endif %}
+          {% if section.settings.btn_text != blank %}
+            <a href="{{ section.settings.btn_url }}" class="btn flex-center uppercase align-center anchor   border-radius_s capitalize">{{ section.settings.btn_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="beta content-wrap">
+        <div class="content">
+          <div class="product-wrapper flex justify-between">
+            {% for block in section.blocks %}
+              {% assign product = block.settings.choose_product %}
+              {% render 'product-item' product: product %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Featured Collection",
+    "settings":[
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "Button Url"
+      }
+    ],
+    "blocks":[
+      {
+        "type": "item",
+        "name": "Item",
+        "limit": 2,
+        "settings":[
+          {
+            "type": "product",
+            "id": "choose_product",
+            "label": "Choose Product"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Featured Collection"
+      }
+    ]
+  }
+{% endschema %}
+
+
+
